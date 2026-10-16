@@ -42,7 +42,6 @@ button,input,select,textarea{font:inherit;color:inherit}
 .shell{max-width:460px;margin:0 auto;background:var(--paper);border:var(--bd);border-radius:28px;box-shadow:8px 8px 0 var(--ink);overflow:hidden;position:relative}
 .wrap{padding-left:var(--gl);padding-right:var(--gr)}
 
-/* (pita demo dihapus) */
 .ribbon{background:var(--ink);color:#fff;font-size:12.5px}
 .ribbon .wrap{display:flex;align-items:center;justify-content:space-between;gap:6px 12px;flex-wrap:wrap;padding-block:9px}
 .ribbon b{background:var(--yellow);color:var(--ink);font-weight:800;font-size:11px;letter-spacing:.08em;text-transform:uppercase;padding:2px 9px;border-radius:999px;margin-right:8px}
@@ -78,6 +77,12 @@ button,input,select,textarea{font:inherit;color:inherit}
 .chips span{font-size:13px;font-weight:700;background:var(--mint-soft);border:2px solid var(--ink);border-radius:999px;padding:2px 12px}
 .chips span:nth-child(2){background:var(--pink-soft)}.chips span:nth-child(3){background:var(--blue-soft)}
 .note{font-size:12.5px;color:var(--ink3);margin-top:16px}
+
+/* kotak urgensi (DIKECILKAN 50%) */
+.urgent{position:relative;text-align:left;background:var(--pink-soft);border:var(--bd);border-radius:12px;box-shadow:2px 2px 0 var(--ink);padding:10px 12px;margin:0 0 12px}
+.urgent .ut{display:flex;align-items:center;gap:4px;font-weight:800;font-size:12.5px;line-height:1.2;color:var(--err);margin-bottom:4px}
+.urgent .ui{font-size:14px;line-height:1;flex-shrink:0}
+.urgent p{font-size:12.5px;line-height:1.5;color:var(--ink)}
 
 /* kartu hasil */
 .stage{position:relative;padding-top:22px;width:100%;text-align:left}
@@ -149,12 +154,13 @@ textarea.fi{resize:none;min-height:60px}.fi:focus-visible{outline:3px solid var(
 .sec{padding-block:48px;border-top:var(--bd)}
 .sec.blue{background:var(--blue-soft)}.sec.yellow{background:var(--yellow)}.sec.pink{background:var(--pink-soft)}.sec.white{background:var(--white)}
 .sh{margin-bottom:26px}
+.sh.c{text-align:center}
 .st{font-family:var(--fd);font-weight:400;font-size:28px;line-height:1.1;text-wrap:balance;margin-bottom:10px}
 .ss{font-size:16px;color:var(--ink2)}
 
 .pain{display:grid;gap:14px}
 .pain p{background:var(--white);border:var(--bd);border-radius:16px;padding:16px 18px;box-shadow:var(--sh-s);font-weight:500;font-size:15.5px}
-.pain-end{margin-top:26px;font-family:var(--fd);font-size:23px;line-height:1.2;text-wrap:balance}
+.pain-end{text-align:center;margin-top:26px;font-family:var(--fd);font-size:23px;line-height:1.2;text-wrap:balance}
 
 .ben{display:grid;gap:14px}
 .ben>div{display:grid;grid-template-columns:48px minmax(0,1fr);column-gap:14px;align-items:start;border:var(--bd);border-radius:18px;padding:16px;box-shadow:var(--sh-s);min-width:0}
@@ -290,9 +296,13 @@ footer .wrap span{display:block}
     <div class="eb">Tes gratis · 10 pernyataan · ± 4 menit</div>
     <h1 class="ht">Kenali pola pengasuhanmu, <mark>dampingi anak</mark> dengan lebih tenang.</h1>
     <p class="lead">Pahami <strong>cara kamu menghadapi emosi anak, menetapkan aturan, dan mengelola kelelahan</strong>. Bukan untuk menilai benar atau salah, tapi untuk melihat pola yang bisa kamu rawat dan perbaiki, mulai dari langkah kecil.</p>
+    <div class="urgent" role="note">
+      <div class="ut"><span class="ui" aria-hidden="true">⚠️</span>Mengapa penting tes sekarang?</div>
+      <p>Setiap hari kita merespons emosi anak dengan pola yang salah, rasa percaya diri dan kedekatan emosional anak sedang dipertaruhkan. Mulai tes 4 menit ini sekarang sebelum pola reaksi spontanmu menjadi kebiasaan permanen pada anak.</p>
+    </div>
     <div class="cta-row"><button class="btn" type="button" onclick="PC.open()">Mulai ParentingCode Test</button><a class="btn white" href="#hasil">Lihat contoh hasil</a></div>
     <div class="chips"><span>100% gratis</span><span>Atas persetujuanmu</span><span>Hasil langsung</span></div>
-    <p class="note">Gratis, tanpa daftar akun. Jawabanmu baru dikirim jika kamu menyetujuinya di akhir. Alat refleksi untuk orang tua, bukan penilaian terhadap anak atau pengganti psikolog. <a href="privasi.html">Kebijakan Privasi</a></p>
+    <p class="note">Gratis, tanpa daftar akun. Jawabanmu baru dikirim jika kamu menyetujuinya di akhir. Alat refleksi untuk orang tua, bukan penilaian terhadap anak atau pengganti psikolog.</p>
   </div>
   <div class="stage" id="hasil">
     <div class="sticker" aria-hidden="true">Gratis<small>4 menit</small></div>
@@ -309,18 +319,18 @@ footer .wrap span{display:block}
 </div></section>
 
 <section class="sec blue"><div class="wrap">
-  <div class="sh"><h2 class="st">Pernah merasa begini sebagai orang tua?</h2><p class="ss">Kalau salah satunya terasa dekat, tes ini dibuat untukmu.</p></div>
+  <div class="sh c"><h2 class="st">Pernah merasa begini sebagai orang tua?</h2><p class="ss">Kalau salah satunya terasa dekat, tes ini dibuat untukmu.</p></div>
   <div class="pain">
     <p>Kamu meninggikan suara saat lelah, lalu menyesal begitu anak terdiam.</p>
     <p>Kamu ingin tegas, tapi tidak tega melihat anak menangis, dan akhirnya aturan melonggar.</p>
     <p>Kamu sudah memberi yang terbaik, tapi masih merasa kurang dibanding orang tua lain.</p>
     <p>Kamu bingung kenapa anak sering menolak, padahal niatmu baik.</p>
   </div>
-  <p class="pain-end">Itu bukan tanda kamu orang tua yang gagal. Itu pola, dan pola bisa dikenali lalu dirawat.</p>
+  <p class="pain-end">Itu bukan tanda kamu orang tua yang gagal. Itu adalah pola, dan pola bisa kita kenali lalu diperbaiki.</p>
 </div></section>
 
 <section class="sec white"><div class="wrap">
-  <div class="sh"><h2 class="st">Yang kamu dapat setelah 4 menit</h2><p class="ss">Tanpa daftar akun, tanpa bayar.</p></div>
+  <div class="sh c"><h2 class="st">Yang kamu dapat setelah 4 menit</h2><p class="ss">Tanpa daftar akun, tanpa bayar.</p></div>
   <div class="ben">
     <div><div class="bi"><svg viewBox="0 0 24 24" fill="none" stroke="#1A1A3D" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2 5-5 2 2-5z"/></svg></div><b>Pola pengasuhan utama</b><p>Satu dari 8 pola, lengkap dengan kekuatan dan tantangannya di rumah.</p><span class="tg">hasil instan</span></div>
     <div><div class="bi"><svg viewBox="0 0 24 24" fill="none" stroke="#1A1A3D" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 20V10M12 20V4M19 20v-7"/></svg></div><b>Peta 4 dimensi</b><p>Kehangatan, struktur dan batasan, penerimaan emosi anak, serta ketenangan dirimu.</p><span class="tg">hasil instan</span></div>
@@ -330,12 +340,12 @@ footer .wrap span{display:block}
 </div></section>
 
 <section class="sec pink" id="tipe"><div class="wrap">
-  <div class="sh"><h2 class="st">8 pola pengasuhan. Kamu yang mana?</h2><p class="ss">Hasilmu akan jatuh di salah satunya. Tidak ada pola yang buruk.</p></div>
+  <div class="sh c"><h2 class="st">8 pola pengasuhan. Kamu yang mana?</h2><p class="ss">Hasilmu akan jatuh di salah satunya. Tidak ada pola yang buruk.</p></div>
   <div class="pgrid"><div class="pcard"><i>1</i><b>The Warm Anchor</b><span>Jangkar yang Hangat</span></div><div class="pcard"><i>2</i><b>The Emotion Coach</b><span>Pendamping Emosi</span></div><div class="pcard"><i>3</i><b>The Steady Guide</b><span>Pemandu yang Terstruktur</span></div><div class="pcard"><i>4</i><b>The Gentle Heart</b><span>Hati yang Lembut</span></div><div class="pcard"><i>5</i><b>The Protective Guardian</b><span>Pelindung yang Siaga</span></div><div class="pcard"><i>6</i><b>The Fast Reactor</b><span>Si Cepat Bereaksi</span></div><div class="pcard"><i>7</i><b>The Weary Hero</b><span>Pahlawan yang Kelelahan</span></div><div class="pcard"><i>8</i><b>The Trusting Guide</b><span>Pemandu yang Percaya</span></div></div>
 </div></section>
 
 <section class="sec yellow" id="cara"><div class="wrap">
-  <div class="sh"><h2 class="st">Cara kerjanya</h2><p class="ss" style="color:var(--ink)">Tiga langkah, langsung dari HP kamu.</p></div>
+  <div class="sh c"><h2 class="st">Cara kerjanya</h2><p class="ss" style="color:var(--ink)">Tiga langkah, langsung dari HP kamu.</p></div>
   <div class="steps">
     <div class="step"><span>1</span><b>Kenalkan dirimu dan anakmu</b><p>Cukup nama panggilan serta bulan dan tahun lahir anak. Tanpa data sensitif.</p></div>
     <div class="step"><span>2</span><b>Jawab 10 pernyataan singkat</b><p>Tentang kehangatan, aturan, respons terhadap emosi anak, dan kondisi dirimu. Tidak ada jawaban benar atau salah.</p></div>
