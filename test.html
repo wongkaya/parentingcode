@@ -91,7 +91,11 @@ button,input,select,textarea{font:inherit;color:inherit}
 .note-card{background:var(--mint-soft);border:var(--bd);border-radius:14px;padding:12px 14px;margin-bottom:16px;box-shadow:var(--sh-s);font-size:13.5px;color:var(--ink)}
 .note-card b{display:block;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#3F7F60;margin-bottom:4px}
 
-footer{padding:16px var(--gr) 22px var(--gl);font-size:12.5px;color:var(--ink3);text-align:center;border-top:var(--bd);background:var(--white)}
+footer{padding:18px var(--gr) 22px var(--gl);font-size:12.5px;color:var(--ink3);text-align:center;border-top:var(--bd);background:var(--white)}
+footer .nav{display:flex;flex-wrap:wrap;gap:4px 16px;justify-content:center;padding:0 0 14px;margin-bottom:2px}
+footer .nav a{font-size:13.5px;font-weight:700;color:var(--ink);text-decoration:none;padding:4px 2px;border-bottom:3px solid transparent;transition:border-color .15s}
+footer .nav a:hover,footer .nav a:focus-visible{border-bottom-color:var(--pink)}
+footer .legal{font-size:12px;color:var(--ink3);line-height:1.65;text-align:center;border-top:2px dashed rgba(26,26,61,.15);padding-top:12px}
 
 @media(max-width:520px){
   body{padding:0;background:var(--paper)}
@@ -537,7 +541,14 @@ footer{padding:16px var(--gr) 22px var(--gl);font-size:12.5px;color:var(--ink3);
   </main>
 
   <footer>
-    <p>&copy; 2026 ParentingCode · Tes Pola Pengasuhan Orang Tua &amp; Anak</p>
+    <nav class="nav" aria-label="Menu halaman">
+      <a href="index.html">Beranda</a>
+      <a href="tentang.html">Tentang</a>
+      <a href="privasi.html">Privasi</a>
+      <a href="syarat.html">Syarat</a>
+      <a href="kontak.html">Kontak</a>
+    </nav>
+    <p class="legal">&copy; 2026 ParentingCode · Tes Pola Pengasuhan Orang Tua &amp; Anak</p>
   </footer>
 </div>
 
@@ -545,7 +556,8 @@ footer{padding:16px var(--gr) 22px var(--gl);font-size:12.5px;color:var(--ink3);
 (function(){
   let currentStep = 1;
   const totalSteps = 21;
-  const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzjlKBvxgBGQyzMv2txLcFxe-GwJJuZHH3ZzI2idoz4qSxDtoxMdGHbHQf8nS0q9apN/exec';
+  // ✅ URL Apps Script ParentingCode
+  const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzbML2sOqpUpduC8k1oLMRQfIZsq4vWfI68UUgyPw9-aHEs3waEK89g8Mff5kA77nCJ1g/exec';
 
   const stepPanes = document.querySelectorAll('.step-pane');
   const btnNext = document.getElementById('btn-next');
