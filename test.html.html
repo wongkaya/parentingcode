@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#F4F7FF">
+<title>Tes Pola Pengasuhan Orang Tua &amp; Anak | ParentingCode</title>
+<meta name="description" content="Tes refleksi 20 situasi untuk mengenali pola pengasuhanmu saat menghadapi emosi anak. Gratis, hasil instan.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Figtree:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  color-scheme:light;
+  --paper:#F4F7FF;--white:#FFFFFF;
+  --ink:#1A1A3D;--ink2:#43456B;--ink3:#5F6188;
+  --yellow:#FFC93C;--yellow-soft:#FFF0BF;
+  --blue:#5AAAFF;--blue-soft:#D9ECFF;
+  --pink:#FF8FAB;--pink-soft:#FFE1E9;
+  --mint:#7DDCB0;--mint-soft:#D6F5E7;
+  --err:#B3261E;--err-bg:#FFE9E6;
+  --bd:2.5px solid var(--ink);
+  --sh:5px 5px 0 var(--ink);
+  --sh-s:3px 3px 0 var(--ink);
+  --fd:'Bagel Fat One','Arial Rounded MT Bold','Trebuchet MS',system-ui,sans-serif;
+  --fb:'Figtree',system-ui,-apple-system,'Segoe UI',Arial,sans-serif;
+  --gl:max(16px,env(safe-area-inset-left,0px));
+  --gr:max(16px,env(safe-area-inset-right,0px));
+}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;padding:24px 16px;background:var(--blue-soft);color:var(--ink);font-family:var(--fb);font-size:16px;line-height:1.55;-webkit-text-size-adjust:100%}
+h1,h2,h3,h4,p{margin:0}
+a{color:var(--ink);font-weight:700}
+button,input,select,textarea{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
+.shell{max-width:460px;margin:0 auto;background:var(--paper);border:var(--bd);border-radius:28px;box-shadow:8px 8px 0 var(--ink);overflow:hidden;position:relative}
+.wrap{padding-left:var(--gl);padding-right:var(--gr)}
+
+.hdr{background:var(--white);border-bottom:var(--bd)}
+.hdr .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-block:14px}
+.logo{display:flex;align-items:center;gap:9px;font-family:var(--fd);font-size:20px;line-height:1;font-weight:400;color:var(--ink);text-decoration:none}
+.logo svg{width:32px;height:32px;flex-shrink:0}
+.logo b{font-weight:400}
+.logo b i{font-style:normal;color:#E0527A}
+.hdr-tag{font-size:10.5px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;background:var(--pink-soft);border:2px solid var(--ink);border-radius:999px;padding:3px 10px;white-space:nowrap}
+
+.prog-section{background:var(--white);border-bottom:var(--bd);padding:12px var(--gr) 14px var(--gl)}
+.prog-info{display:flex;justify-content:space-between;font-size:12.5px;font-weight:800;color:var(--ink2);margin-bottom:6px}
+.prog-info b{color:var(--ink)}
+.pb{height:14px;background:var(--white);border:2.5px solid var(--ink);border-radius:999px;overflow:hidden}
+.pb i{display:block;height:100%;background:var(--pink);border-right:2.5px solid var(--ink);transition:width .4s ease;width:0}
+
+.content{padding:22px var(--gr) 26px var(--gl)}
+.step-pane{display:none}
+.step-pane.active{display:block;animation:fadeIn .35s ease}
+@keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+
+.rt{display:inline-block;font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;background:var(--yellow);border:2px solid var(--ink);border-radius:999px;padding:2px 12px;margin-bottom:12px}
+.step-pane h2{font-family:var(--fd);font-weight:400;font-size:24px;line-height:1.15;margin-bottom:10px;text-wrap:balance}
+.step-pane .sub{font-size:14.5px;color:var(--ink2);margin-bottom:16px}
+
+.story{position:relative;background:var(--yellow-soft);border:var(--bd);border-radius:16px;padding:16px 16px 16px 44px;box-shadow:var(--sh-s);margin-bottom:18px;font-size:15px;color:var(--ink);line-height:1.55}
+.story::before{content:'\201C';position:absolute;left:12px;top:6px;font-family:var(--fd);font-size:48px;line-height:1;color:var(--pink);-webkit-text-stroke:1.5px var(--ink)}
+
+.form-group{margin-bottom:18px}
+.form-group label.l{display:block;font-size:14px;font-weight:800;margin-bottom:8px;color:var(--ink);line-height:1.4}
+.field{width:100%;padding:12px 14px;background:var(--white);border:var(--bd);border-radius:12px;font:600 15px var(--fb);color:var(--ink)}
+.field:focus{outline:none;background:var(--yellow-soft)}
+.field[readonly]{background:var(--yellow-soft);cursor:not-allowed;opacity:.92}
+
+.options-grid{display:flex;flex-direction:column;gap:8px;margin-bottom:14px}
+.option-card{display:flex;align-items:flex-start;gap:12px;padding:11px 13px;background:var(--white);border:var(--bd);border-radius:14px;box-shadow:var(--sh-s);cursor:pointer;transition:transform .1s,box-shadow .1s,background .1s;position:relative}
+.option-card:hover{background:var(--yellow-soft);transform:translate(-1px,-1px);box-shadow:4px 4px 0 var(--ink)}
+.option-card.selected{background:var(--yellow);transform:translate(-2px,-2px);box-shadow:5px 5px 0 var(--ink)}
+.option-card input[type="radio"]{appearance:none;-webkit-appearance:none;width:20px;height:20px;flex-shrink:0;margin-top:1px;border:2.5px solid var(--ink);border-radius:50%;background:var(--white);cursor:pointer;position:relative}
+.option-card input[type="radio"]:checked{background:var(--ink)}
+.option-card input[type="radio"]:checked::after{content:'';position:absolute;inset:3px;border-radius:50%;background:var(--yellow)}
+.option-card .opt-text{font-size:14.5px;font-weight:600;color:var(--ink);line-height:1.4}
+
+.err-msg{display:none;background:var(--err-bg);color:var(--err);border:2px solid var(--err);border-radius:10px;padding:9px 12px;font-size:13.5px;font-weight:700;margin-top:8px}
+
+.nav-buttons{display:flex;gap:10px;margin-top:24px}
+.btn{display:inline-flex;align-items:center;justify-content:center;flex:1;min-height:52px;padding:12px 20px;background:var(--yellow);color:var(--ink);border:var(--bd);border-radius:14px;box-shadow:var(--sh-s);font-weight:800;font-size:16px;cursor:pointer;text-decoration:none;transition:transform .12s,box-shadow .12s,background .12s}
+.btn:hover{transform:translate(-2px,-2px);box-shadow:5px 5px 0 var(--ink)}
+.btn:active{transform:translate(2px,2px);box-shadow:1px 1px 0 var(--ink)}
+.btn:disabled{opacity:.5;cursor:not-allowed;transform:none;box-shadow:var(--sh-s)}
+.btn-sec{flex:0 0 110px;background:var(--white);color:var(--ink2)}
+
+#submit-preview{background:var(--yellow-soft);border:var(--bd);border-radius:14px;padding:14px 16px;margin-bottom:16px;box-shadow:var(--sh-s);font-size:14px;display:grid;gap:7px}
+#submit-preview b{color:var(--ink);font-weight:800}
+.note-card{background:var(--mint-soft);border:var(--bd);border-radius:14px;padding:12px 14px;margin-bottom:16px;box-shadow:var(--sh-s);font-size:13.5px;color:var(--ink)}
+.note-card b{display:block;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#3F7F60;margin-bottom:4px}
+
+footer{padding:16px var(--gr) 22px var(--gl);font-size:12.5px;color:var(--ink3);text-align:center;border-top:var(--bd);background:var(--white)}
+
+@media(max-width:520px){
+  body{padding:0;background:var(--paper)}
+  .shell{border:none;border-radius:0;box-shadow:none;max-width:100%}
+}
+@media(prefers-reduced-motion:reduce){
+  .step-pane.active{animation:none}
+  .pb i,.btn,.option-card{transition:none}
+}
+</style>
+</head>
+<body>
+
+<div class="shell">
+
+  <header class="hdr">
+    <div class="wrap">
+      <a class="logo" href="index.html">
+        <svg viewBox="0 0 40 40" aria-hidden="true">
+          <circle cx="20" cy="20" r="18" fill="#FFC93C" stroke="#1A1A3D" stroke-width="2.5"/>
+          <path d="M20 30V19" stroke="#1A1A3D" stroke-width="2.8" stroke-linecap="round"/>
+          <path d="M20 21c0-5 3-8 8-8 0 5-3 8-8 8z" fill="#7DDCB0" stroke="#1A1A3D" stroke-width="2.4" stroke-linejoin="round"/>
+          <path d="M20 24c0-4-2.5-6.5-7-6.5 0 4 2.5 6.5 7 6.5z" fill="#FF8FAB" stroke="#1A1A3D" stroke-width="2.4" stroke-linejoin="round"/>
+        </svg>
+        <b>Parenting<i>Code</i></b>
+      </a>
+      <span class="hdr-tag">Tes Pola Asuh</span>
+    </div>
+  </header>
+
+  <div class="prog-section">
+    <div class="prog-info">
+      <span id="step-counter">Langkah 1 dari 21</span>
+      <b id="progress-percent">0%</b>
+    </div>
+    <div class="pb"><i id="progress-fill"></i></div>
+  </div>
+
+  <main class="content">
+    <form id="quiz-form" onsubmit="return false;">
+
+      <!-- STEP 1: Identitas -->
+      <div class="step-pane active" data-step="1">
+        <span class="rt">Langkah Awal</span>
+        <h2>Identitas Orang Tua &amp; Anak</h2>
+        <p class="sub">Isi data dasar sebelum memulai refleksi pola pengasuhan.</p>
+
+        <div class="form-group">
+          <label class="l" for="parent_name">Nama Orang Tua</label>
+          <input class="field" type="text" id="parent_name" placeholder="Contoh: Rina" required>
+        </div>
+        <div class="form-group">
+          <label class="l" for="parent_birthdate">Tanggal Lahir Orang Tua</label>
+          <input class="field" type="date" id="parent_birthdate" required>
+        </div>
+        <div class="form-group">
+          <label class="l" for="parent_age">Usia Orang Tua (otomatis)</label>
+          <input class="field" type="text" id="parent_age" placeholder="Akan terisi otomatis" readonly required>
+        </div>
+        <div class="form-group">
+          <label class="l" for="relationship">Hubungan dengan Anak</label>
+          <select class="field" id="relationship">
+            <option value="Ayah">Ayah</option>
+            <option value="Ibu">Ibu</option>
+            <option value="Wali">Wali / Pengasuh Utama</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="l" for="child_name">Nama Anak</label>
+          <input class="field" type="text" id="child_name" placeholder="Contoh: Bima" required>
+        </div>
+        <div class="form-group">
+          <label class="l" for="child_birthdate">Tanggal Lahir Anak</label>
+          <input class="field" type="date" id="child_birthdate" required>
+        </div>
+        <div class="form-group">
+          <label class="l" for="child_age">Usia Anak (otomatis)</label>
+          <input class="field" type="text" id="child_age" placeholder="Akan terisi otomatis" readonly required>
+        </div>
+      </div>
+
+      <!-- STEP 2: Babak 1 -->
+      <div class="step-pane" data-step="2">
+        <span class="rt">Babak 1 dari 8 · Storytelling</span>
+        <h2>Tangis Tengah Malam</h2>
+        <div class="story">"Pukul 2 pagi, anakmu terbangun dan menangis keras. Suhunya normal, tidak ada tanda sakit, tapi ia terus menangis dan menolak ditenangkan. Kamu sudah lelah dan besok harus bekerja."</div>
+
+        <div class="form-group">
+          <label class="l">2A. Emosi utama apa yang paling kuat menyergap hatimu?</label>
+          <div class="options-grid" data-name="emo_1">
+            <label class="option-card"><input type="radio" name="emo_1" value="Cemas"><span class="opt-text">Cemas / Takut (Khawatir anak kenapa-napa)</span></label>
+            <label class="option-card"><input type="radio" name="emo_1" value="Bingung"><span class="opt-text">Bingung / Ragu (Tidak tahu harus buat apa)</span></label>
+            <label class="option-card"><input type="radio" name="emo_1" value="Kesal"><span class="opt-text">Kesal / Frustrasi (Sudah capek tapi harus bangun)</span></label>
+            <label class="option-card"><input type="radio" name="emo_1" value="Pasrah"><span class="opt-text">Sedih / Putus Asa (Merasa tak berdaya)</span></label>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="l">2B. Bagaimana reaksi tubuh atau mentalmu setelahnya?</label>
+          <div class="options-grid" data-name="resp_1">
+            <label class="option-card"><input type="radio" name="resp_1" value="Stres"><span class="opt-text">Stres &amp; Gemetar (Sangat tertekan)</span></label>
+            <label class="option-card"><input type="radio" name="resp_1" value="Pasrah"><span class="opt-text">Pasrah (Menunggu dalam diam sampai anak diam)</span></label>
+            <label class="option-card"><input type="radio" name="resp_1" value="Tenang"><span class="opt-text">Tetap Tenang (Menarik napas, mencari solusi)</span></label>
+          </div>
+        </div>
+      </div>
+
+      <!-- STEP 3: Babak 2 -->
+      <div class="step-pane" data-step="3">
+        <span class="rt">Babak 2 dari 8 · Storytelling</span>
+        <h2>Tantrum di Mall</h2>
+        <div class="story">"Di tengah mall ramai, anakmu menangis kencang dan berguling di lantai karena mainan yang tidak dibelikan. Orang-orang mulai menatap. Kamu merasa semua mata tertuju padamu."</div>
+        <div class="form-group">
+          <label class="l">3A. Perasaan apa yang paling mendominasi saat ditatap orang?</label>
+          <div class="options-grid" data-name="emo_2">
+            <label class="option-card"><input type="radio" name="emo_2" value="Malu"><span class="opt-text">Malu &amp; Bersalah (Merasa dinilai buruk sebagai orang tua)</span></label>
+            <label class="option-card"><input type="radio" name="emo_2" value="Marah"><span class="opt-text">Marah &amp; Tersinggung (Kesal pada anak yang bikin malu)</span></label>
+            <label class="option-card"><input type="radio" name="emo_2" value="Panik"><span class="opt-text">Panik &amp; Tak Berdaya (Tidak tahu harus bagaimana)</span></label>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="l">3B. Respons spontanmu menghadapi situasi ini?</label>
+          <div class="options-grid" data-name="resp_2">
+            <label class="option-card"><input type="radio" name="resp_2" value="Menyerah"><span class="opt-text">Menyerah &amp; Belikan (Asal anak diam)</span></label>
+            <label class="option-card"><input type="radio" name="resp_2" value="Tegas"><span class="opt-text">Tegas &amp; Tenangkan (Peluk, validasi, tetap pegang aturan)</span></label>
+            <label class="option-card"><input type="radio" name="resp_2" value="Marah"><span class="opt-text">Marah &amp; Seret Anak (Kesal dan buru-buru pergi)</span></label>
+          </div>
+        </div>
+      </div>
+
+      <!-- STEP 4: Babak 3 -->
+      <div class="step-pane" data-step="4">
+        <span class="rt">Babak 3 dari 8 · Storytelling</span>
+        <h2>Foto Keluarga Sempurna</h2>
+        <div class="story">"Kamu membuka media sosial dan melihat teman-teman memposting foto keluarga bahagia, anak-anak berprestasi. Sementara anakmu baru saja membuat masalah di sekolah hari ini."</div>
+        <div class="form-group">
+          <label class="l">4A. Jujur di dalam hati, apa yang kamu rasakan?</label>
+          <div class="options-grid" data-name="emo_3">
+            <label class="option-card"><input type="radio" name="emo_3" value="Iri"><span class="opt-text">Iri / Cemburu (Menginginkan kondisi mereka)</span></label>
+            <label class="option-card"><input type="radio" name="emo_3" value="Sedih"><span class="opt-text">Sedih / Kecewa (Merasa gagal sebagai orang tua)</span></label>
+            <label class="option-card"><input type="radio" name="emo_3" value="Tersinggung"><span class="opt-text">Tersinggung / Malu (Merasa dibanding-bandingkan)</span></label>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="l">4B. Bagaimana pengaruhnya terhadap sikapmu?</label>
+          <div class="options-grid" data-name="resp_3">
+            <label class="option-card"><input type="radio" name="resp_3" value="Membandingkan"><span class="opt-text">Membandingkan (Mengeluh dan menyalahkan keadaan)</span></label>
+            <label class="option-card"><input type="radio" name="resp_3" value="Menarik Diri"><span class="opt-text">Menarik Diri (Menutup medsos dan mengurung diri)</span></label>
+            <label class="option-card"><input type="radio" name="resp_3" value="Refleksi"><span class="opt-text">Refleksi (Sadar tiap keluarga punya perjalanan sendiri)</span></label>
+          </div>
+        </div>
+      </div>
+
+      <!-- STEP 5: Babak 4 -->
+      <div class="step-pane" data-step="5">
+        <span class="rt">Babak 4 dari 8 · Storytelling</span>
+        <h2>Anak Sakit</h2>
+        <div class="story">"Anakmu demam tinggi tengah malam. Kamu sudah berusaha menurunkan suhunya, tapi belum berhasil. Kamu lelah, cemas, dan tidak tahu harus bagaimana lagi."</div>
+        <div class="form-group">
+          <label class="l">5A. Emosi apa yang memuncak di dalam diri?</label>
+          <div class="options-grid" data-name="emo_4">
+            <label class="option-card"><input type="radio" name="emo_4" value="Frustrasi"><span class="opt-text">Frustrasi &amp; Cemas (Geram karena tak kunjung turun)</span></label>
+            <label class="option-card"><input type="radio" name="emo_4" value="Bersalah"><span class="opt-text">Merasa Bersalah (Menyalahkan diri sendiri)</span></label>
+            <label class="option-card"><input type="radio" name="emo_4" value="Marah"><span class="opt-text">Marah &amp; Kesal (Ingin meluapkan kekesalan)</span></label>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="l">5B. Kondisimu saat akhirnya anak tertidur?</label>
+          <div class="options-grid" data-name="resp_4">
+            <label class="option-card"><input type="radio" name="resp_4" value="Lelah"><span class="opt-text">Lelah Fisik &amp; Mental (Sudah lemas dan lunglai)</span></label>
+            <label class="option-card"><input type="radio" name="resp_4" value="Syukur"><span class="opt-text">Syukur &amp; Lega (Bersyukur anak akhirnya tenang)</span></label>
+          </div>
+        </div>
+      </div>
+
+      <!-- STEP 6: Babak 5 -->
+      <div class="step-pane" data-step="6">
+        <span class="rt">Babak 5 dari 8 · Storytelling</span>
+        <h2>Pelukan Anak</h2>
+        <div class="story">"Tanpa diminta, anakmu tiba-tiba memelukmu dan berkata 'Aku sayang Mama/Papa' setelah kamu lelah seharian bekerja dan mengurus rumah. Ia lalu berlari kembali bermain."</div>
+        <div class="form-group">
+          <label class="l">6A. Apa yang muncul di dalam perasaanmu?</label>
+          <div class="options-grid" data-name="emo_5">
+            <label class="option-card"><input type="radio" name="emo_5" value="Syukur"><span class="opt-text">Syukur &amp; Terharu (Tersentuh luar biasa)</span></label>
+            <label class="option-card"><input type="radio" name="emo_5" value="Bangga"><span class="opt-text">Bangga &amp; Kagum (Terpesona pada anak)</span></label>
+            <label class="option-card"><input type="radio" name="emo_5" value="Bahagia"><span class="opt-text">Bahagia &amp; Senang (Hati merasa hangat)</span></label>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="l">6B. Dampak kejadian ini pada sikapmu?</label>
+          <div class="options-grid" data-name="resp_5">
+            <label class="option-card"><input type="radio" name="resp_5" value="Optimis"><span class="opt-text">Optimis (Makin percaya diri sebagai orang tua)</span></label>
+            <label class="option-card"><input type="radio" name="resp_5" value="Empati"><span class="opt-text">Empati (Tergerak lebih hangat pada anak)</span></label>
+          </div>
+        </div>
+      </div>
+
+      <!-- STEP 7: Babak 6 -->
+      <div class="step-pane" data-step="7">
+        <span class="rt">Babak 6 dari 8 · Storytelling</span>
+        <h2>Album Foto Lama</h2>
+        <div class="story">"Saat merapikan lemari, kamu menemukan album foto masa kecil anakmu. Kamu teringat waktu cepat berlalu, dan semua momen yang mungkin terlewat karena sibuk bekerja."</div>
+        <div class="form-group">
+          <label class="l">7A. Perasaan apa yang menyergap hatimu?</label>
+          <div class="options-grid" data-name="emo_6">
+            <label class="option-card"><input type="radio" name="emo_6" value="Nostalgia"><span class="opt-text">Nostalgia &amp; Rindu (Teringat kenangan manis)</span></label>
+            <label class="option-card"><input type="radio" name="emo_6" value="Menyesal"><span class="opt-text">Sedih &amp; Menyesal (Merasa kurang hadir untuk anak)</span></label>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="l">7B. Sikap membekas setelah menutup album itu?</label>
+          <div class="options-grid" data-name="resp_6">
+            <label class="option-card"><input type="radio" name="resp_6" value="Refleksi"><span class="opt-text">Refleksi (Bertekad lebih hadir ke depannya)</span></label>
+            <label class="option-card"><input type="radio" name="resp_6" value="Melamun"><span class="opt-text">Mati Rasa / Melamun (Tenggelam dalam pikiran)</span></label>
+          </div>
+        </div>
+      </div>
+
+      <!-- STEP 8: Babak 7 -->
+      <div class="step-pane" data-step="8">
+        <span class="rt">Babak 7 dari 8 · Storytelling</span>
+        <h2>Tawaran Kerja Luar Kota</h2>
+        <div class="story">"Kamu mendapat tawaran pekerjaan impian di luar kota dengan gaji jauh lebih tinggi, tapi harus jauh dari anak selama 6 bulan. Jawaban harus diberikan besok pagi."</div>
+        <div class="form-group">
+          <label class="l">8A. Emosi apa yang bertarung di kepalamu?</label>
+          <div class="options-grid" data-name="emo_7">
+            <label class="option-card"><input type="radio" name="emo_7" value="Ragu"><span class="opt-text">Ragu &amp; Bingung (Takut salah mengambil keputusan)</span></label>
+            <label class="option-card"><input type="radio" name="emo_7" value="Bersalah"><span class="opt-text">Bersalah &amp; Cemas (Takut meninggalkan anak)</span></label>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="l">8B. Bagaimana caramu menghadapinya?</label>
+          <div class="options-grid" data-name="resp_7">
+            <label class="option-card"><input type="radio" name="resp_7" value="Stres"><span class="opt-text">Stres (Cemas berlebihan sampai tak bisa tidur)</span></label>
+            <label class="option-card"><input type="radio" name="resp_7" value="Berani"><span class="opt-text">Berani &amp; Bijak (Menimbang prioritas dengan tenang)</span></label>
+          </div>
+        </div>
+      </div>
+
+      <!-- STEP 9: Babak 8 -->
+      <div class="step-pane" data-step="9">
+        <span class="rt">Babak 8 dari 8 · Storytelling</span>
+        <h2>Anak di Atas Panggung</h2>
+        <div class="story">"Di acara sekolah, anakmu dipanggil ke depan karena prestasinya. Semua orang bertepuk tangan, dan anakmu mencari matamu di kerumunan. Ia tersenyum bangga saat menemukanmu."</div>
+        <div class="form-group">
+          <label class="l">9A. Perasaan apa yang meledak di dalam diri?</label>
+          <div class="options-grid" data-name="emo_8">
+            <label class="option-card"><input type="radio" name="emo_8" value="Bangga"><span class="opt-text">Bangga &amp; Bahagia (Merasa dihargai sepenuhnya)</span></label>
+            <label class="option-card"><input type="radio" name="emo_8" value="Lega"><span class="opt-text">Lega &amp; Puas (Beban usaha terbayar tuntas)</span></label>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="l">9B. Bagaimana kondisi mentalmu setelahnya?</label>
+          <div class="options-grid" data-name="resp_8">
+            <label class="option-card"><input type="radio" name="resp_8" value="Optimis"><span class="opt-text">Optimis &amp; Percaya Diri (Makin semangat mendampingi)</span></label>
+            <label class="option-card"><input type="radio" name="resp_8" value="Rendah Hati"><span class="opt-text">Rendah Hati &amp; Syukur (Tetap membumi)</span></label>
+          </div>
+        </div>
+      </div>
+
+      <!-- STEP 10 -->
+      <div class="step-pane" data-step="10">
+        <span class="rt">Pola Pikir · 1 dari 12</span>
+        <h2>Tantrum di Toko</h2>
+        <p class="sub">Pilih reaksi atau pikiran spontan yang paling menggambarkan dirimu.</p>
+        <div class="story">Anakmu menangis kencang di toko karena tidak dibelikan permen. Semua orang menoleh.</div>
+        <div class="options-grid" data-name="mm_1">
+          <label class="option-card"><input type="radio" name="mm_1" value="healthy"><span class="opt-text">Ajak anak ke tempat tenang, peluk, dan validasi perasaannya.</span></label>
+          <label class="option-card"><input type="radio" name="mm_1" value="generalization"><span class="opt-text">Membatin, "Anakku memang selalu begini kalau minta sesuatu."</span></label>
+          <label class="option-card"><input type="radio" name="mm_1" value="deletion"><span class="opt-text">Belikan saja permennya biar cepat diam dan tidak malu.</span></label>
+          <label class="option-card"><input type="radio" name="mm_1" value="distortion"><span class="opt-text">Kesal, "Anak ini sengaja bikin aku malu di depan orang."</span></label>
+        </div>
+      </div>
+
+      <!-- STEP 11 -->
+      <div class="step-pane" data-step="11">
+        <span class="rt">Pola Pikir · 2 dari 12</span>
+        <h2>Menolak Mengerjakan PR</h2>
+        <div class="story">Anakmu menolak mengerjakan PR dan memilih bermain. Bagaimana sikapmu?</div>
+        <div class="options-grid" data-name="mm_2">
+          <label class="option-card"><input type="radio" name="mm_2" value="generalization"><span class="opt-text">"Anakku memang malas, tidak ada minat belajar."</span></label>
+          <label class="option-card"><input type="radio" name="mm_2" value="healthy"><span class="opt-text">Duduk bersama, cari tahu kenapa ia menolak.</span></label>
+          <label class="option-card"><input type="radio" name="mm_2" value="deletion"><span class="opt-text">Biarkan saja, nanti juga dikerjakan sendiri.</span></label>
+          <label class="option-card"><input type="radio" name="mm_2" value="distortion"><span class="opt-text">"Gurunya memberi PR terlalu banyak untuk anak seusianya."</span></label>
+        </div>
+      </div>
+
+      <!-- STEP 12 -->
+      <div class="step-pane" data-step="12">
+        <span class="rt">Pola Pikir · 3 dari 12</span>
+        <h2>Rewel Saat Kamu Lelah</h2>
+        <div class="story">Kamu baru pulang kerja dan sangat lelah. Anakmu justru rewel minta ditemani bermain.</div>
+        <div class="options-grid" data-name="mm_3">
+          <label class="option-card"><input type="radio" name="mm_3" value="distortion"><span class="opt-text">"Anak ini sengaja cari perhatian saat aku capek."</span></label>
+          <label class="option-card"><input type="radio" name="mm_3" value="generalization"><span class="opt-text">"Tidak ada waktu tenang sama sekali di rumah ini."</span></label>
+          <label class="option-card"><input type="radio" name="mm_3" value="healthy"><span class="opt-text">Bilang, "Papa/Mama butuh 10 menit istirahat dulu ya."</span></label>
+          <label class="option-card"><input type="radio" name="mm_3" value="deletion"><span class="opt-text">Biarkan saja, nanti dia diam sendiri.</span></label>
+        </div>
+      </div>
+
+      <!-- STEP 13 -->
+      <div class="step-pane" data-step="13">
+        <span class="rt">Pola Pikir · 4 dari 12</span>
+        <h2>Minta Main HP Terus</h2>
+        <div class="story">Anakmu terus merengek minta main HP padahal sudah waktunya tidur.</div>
+        <div class="options-grid" data-name="mm_4">
+          <label class="option-card"><input type="radio" name="mm_4" value="generalization"><span class="opt-text">"Anak zaman sekarang memang kecanduan HP."</span></label>
+          <label class="option-card"><input type="radio" name="mm_4" value="distortion"><span class="opt-text">"HP yang bikin anakku jadi susah diatur."</span></label>
+          <label class="option-card"><input type="radio" name="mm_4" value="healthy"><span class="opt-text">Buat aturan waktu layar yang jelas dan konsisten.</span></label>
+          <label class="option-card"><input type="radio" name="mm_4" value="deletion"><span class="opt-text">Kasih saja HP-nya biar cepat tidur.</span></label>
+        </div>
+      </div>
+
+      <!-- STEP 14 -->
+      <div class="step-pane" data-step="14">
+        <span class="rt">Pola Pikir · 5 dari 12</span>
+        <h2>Anak Membantah</h2>
+        <div class="story">Saat diminta melakukan sesuatu, anakmu membantah dengan suara keras.</div>
+        <div class="options-grid" data-name="mm_5">
+          <label class="option-card"><input type="radio" name="mm_5" value="distortion"><span class="opt-text">"Anak ini memang sengaja melawan aku."</span></label>
+          <label class="option-card"><input type="radio" name="mm_5" value="generalization"><span class="opt-text">"Anakku memang keras kepala, tidak bisa diatur."</span></label>
+          <label class="option-card"><input type="radio" name="mm_5" value="healthy"><span class="opt-text">Dengarkan alasannya dulu, baru bicara.</span></label>
+          <label class="option-card"><input type="radio" name="mm_5" value="deletion"><span class="opt-text">Sudahlah, nanti juga mengerti sendiri.</span></label>
+        </div>
+      </div>
+
+      <!-- STEP 15 -->
+      <div class="step-pane" data-step="15">
+        <span class="rt">Pola Pikir · 6 dari 12</span>
+        <h2>Mainan Berantakan</h2>
+        <div class="story">Anakmu meninggalkan mainan berserakan di ruang tamu padahal sudah diminta merapikan.</div>
+        <div class="options-grid" data-name="mm_6">
+          <label class="option-card"><input type="radio" name="mm_6" value="distortion"><span class="opt-text">"Mainan-mainan ini yang bikin rumah selalu kacau."</span></label>
+          <label class="option-card"><input type="radio" name="mm_6" value="healthy"><span class="opt-text">Ajak anak bereskan bersama sambil bermain.</span></label>
+          <label class="option-card"><input type="radio" name="mm_6" value="deletion"><span class="opt-text">Nanti aku saja yang beresin, biar cepat.</span></label>
+          <label class="option-card"><input type="radio" name="mm_6" value="generalization"><span class="opt-text">"Anakku memang tidak bisa rapi."</span></label>
+        </div>
+      </div>
+
+      <!-- STEP 16 -->
+      <div class="step-pane" data-step="16">
+        <span class="rt">Pola Pikir · 7 dari 12</span>
+        <h2>Sulit Tidur Malam</h2>
+        <div class="story">Sudah jam 10 malam, anakmu masih belum mau tidur dan terus bermain.</div>
+        <div class="options-grid" data-name="mm_7">
+          <label class="option-card"><input type="radio" name="mm_7" value="deletion"><span class="opt-text">"Nanti juga ngantuk sendiri, biarkan saja."</span></label>
+          <label class="option-card"><input type="radio" name="mm_7" value="generalization"><span class="opt-text">"Setiap malam selalu begini, tidak ada habisnya."</span></label>
+          <label class="option-card"><input type="radio" name="mm_7" value="healthy"><span class="opt-text">Buat rutinitas tidur yang konsisten (mandi, cerita, lampu redup).</span></label>
+          <label class="option-card"><input type="radio" name="mm_7" value="distortion"><span class="opt-text">"Anak ini sengaja bikin aku ikut begadang."</span></label>
+        </div>
+      </div>
+
+      <!-- STEP 17 -->
+      <div class="step-pane" data-step="17">
+        <span class="rt">Pola Pikir · 8 dari 12</span>
+        <h2>Jatuh dan Menangis</h2>
+        <div class="story">Anakmu jatuh saat bermain, lututnya lecet sedikit dan ia menangis keras.</div>
+        <div class="options-grid" data-name="mm_8">
+          <label class="option-card"><input type="radio" name="mm_8" value="deletion"><span class="opt-text">"Jatuh sedikit saja nangis, nanti juga berhenti."</span></label>
+          <label class="option-card"><input type="radio" name="mm_8" value="generalization"><span class="opt-text">"Anakku memang cengeng, mudah sekali menangis."</span></label>
+          <label class="option-card"><input type="radio" name="mm_8" value="healthy"><span class="opt-text">Peluk, validasi perasaannya, lalu obati lukanya bersama.</span></label>
+          <label class="option-card"><input type="radio" name="mm_8" value="distortion"><span class="opt-text">"Lantainya licin, siapa yang tidak bersihkan sih?"</span></label>
+        </div>
+      </div>
+
+      <!-- STEP 18 -->
+      <div class="step-pane" data-step="18">
+        <span class="rt">Pola Pikir · 9 dari 12</span>
+        <h2>Cemburu pada Saudara</h2>
+        <div class="story">Anakmu cemburu pada adiknya yang baru lahir dan sering minta perhatian lebih.</div>
+        <div class="options-grid" data-name="mm_9">
+          <label class="option-card"><input type="radio" name="mm_9" value="distortion"><span class="opt-text">"Anak ini sengaja cari perhatian dengan cara manja."</span></label>
+          <label class="option-card"><input type="radio" name="mm_9" value="generalization"><span class="opt-text">"Tidak ada kakak yang benar-benar sayang adiknya."</span></label>
+          <label class="option-card"><input type="radio" name="mm_9" value="healthy"><span class="opt-text">Dengarkan perasaannya dan beri waktu khusus untuknya.</span></label>
+          <label class="option-card"><input type="radio" name="mm_9" value="deletion"><span class="opt-text">Biarkan saja, nanti juga terbiasa.</span></label>
+        </div>
+      </div>
+
+      <!-- STEP 19 -->
+      <div class="step-pane" data-step="19">
+        <span class="rt">Pola Pikir · 10 dari 12</span>
+        <h2>Anak Berbohong</h2>
+        <div class="story">Kamu mengetahui anakmu berbohong tentang nilai ulangannya.</div>
+        <div class="options-grid" data-name="mm_10">
+          <label class="option-card"><input type="radio" name="mm_10" value="distortion"><span class="opt-text">"Anak ini sengaja membohongi aku, dasar pembohong."</span></label>
+          <label class="option-card"><input type="radio" name="mm_10" value="generalization"><span class="opt-text">"Anakku memang tidak bisa dipercaya."</span></label>
+          <label class="option-card"><input type="radio" name="mm_10" value="healthy"><span class="opt-text">Cari tahu kenapa ia berbohong, tanpa menghakimi.</span></label>
+          <label class="option-card"><input type="radio" name="mm_10" value="deletion"><span class="opt-text">"Bohong kecil tidak apa-apa, yang penting tidak parah."</span></label>
+        </div>
+      </div>
+
+      <!-- STEP 20 -->
+      <div class="step-pane" data-step="20">
+        <span class="rt">Pola Pikir · 11 dari 12</span>
+        <h2>Menolak Makan Sayur</h2>
+        <div class="story">Anakmu menolak makan sayur dan hanya mau makan nasi dengan kerupuk.</div>
+        <div class="options-grid" data-name="mm_11">
+          <label class="option-card"><input type="radio" name="mm_11" value="distortion"><span class="opt-text">"Anak ini sengaja menolak masakanku."</span></label>
+          <label class="option-card"><input type="radio" name="mm_11" value="generalization"><span class="opt-text">"Anakku memang pemilih makanan dan susah makan."</span></label>
+          <label class="option-card"><input type="radio" name="mm_11" value="healthy"><span class="opt-text">Coba sajikan sayur dengan cara berbeda, tanpa memaksa.</span></label>
+          <label class="option-card"><input type="radio" name="mm_11" value="deletion"><span class="opt-text">Kasih saja yang penting dia mau makan dan kenyang.</span></label>
+        </div>
+      </div>
+
+      <!-- STEP 21 -->
+      <div class="step-pane" data-step="21">
+        <span class="rt">Pola Pikir · 12 dari 12</span>
+        <h2>Berebut Mainan dengan Saudara</h2>
+        <div class="story">Kedua anakmu berebut mainan yang sama dan mulai saling memukul.</div>
+        <div class="options-grid" data-name="mm_12">
+          <label class="option-card"><input type="radio" name="mm_12" value="generalization"><span class="opt-text">"Anak-anakku memang selalu bertengkar, tidak bisa akur."</span></label>
+          <label class="option-card"><input type="radio" name="mm_12" value="deletion"><span class="opt-text">"Biarkan saja, nanti juga berbaikan sendiri."</span></label>
+          <label class="option-card"><input type="radio" name="mm_12" value="healthy"><span class="opt-text">Pisahkan dulu, dengarkan keduanya, lalu bantu selesaikan.</span></label>
+          <label class="option-card"><input type="radio" name="mm_12" value="distortion"><span class="opt-text">"Adiknya yang selalu memancing, kakaknya yang kena salah."</span></label>
+        </div>
+      </div>
+
+      <!-- STEP 22: Konfirmasi -->
+      <div class="step-pane" data-step="22">
+        <span class="rt">Konfirmasi Akhir</span>
+        <h2>Siap Kirim Laporan?</h2>
+        <p class="sub">Periksa kembali data berikut. Laporan profil pengasuhan akan dikirim ke admin.</p>
+
+        <div id="submit-preview"></div>
+
+        <div class="note-card">
+          <b>Catatan</b>
+          Hasil lengkap profil pola pengasuhan &amp; rekomendasi langkah kecil akan diproses admin dan dikirimkan secara otomatis.
+        </div>
+
+        <button type="button" class="btn" id="btn-submit" style="width:100%;">📤 Kirim Laporan Pengasuhan</button>
+        <div id="submit-status" style="margin-top:12px;font-size:12.5px;text-align:center;color:var(--ink2);"></div>
+      </div>
+
+      <div class="err-msg" id="err-pane">Harap pilih salah satu opsi jawaban sebelum melanjutkan.</div>
+
+      <div class="nav-buttons" id="nav-bar">
+        <button type="button" class="btn btn-sec" id="btn-prev" style="display:none;">Kembali</button>
+        <button type="button" class="btn" id="btn-next">Lanjutkan</button>
+      </div>
+
+    </form>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 ParentingCode · Tes Pola Pengasuhan Orang Tua &amp; Anak</p>
+  </footer>
+</div>
+
+<script>
+(function(){
+  let currentStep = 1;
+  const totalSteps = 21;
+  const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzjlKBvxgBGQyzMv2txLcFxe-GwJJuZHH3ZzI2idoz4qSxDtoxMdGHbHQf8nS0q9apN/exec';
+
+  const stepPanes = document.querySelectorAll('.step-pane');
+  const btnNext = document.getElementById('btn-next');
+  const btnPrev = document.getElementById('btn-prev');
+  const navBar = document.getElementById('nav-bar');
+  const errPane = document.getElementById('err-pane');
+  const stepCounter = document.getElementById('step-counter');
+  const progressPercent = document.getElementById('progress-percent');
+  const progressFill = document.getElementById('progress-fill');
+
+  function calculateAge(birthdateStr, isChild){
+    if(!birthdateStr) return '';
+    const birth = new Date(birthdateStr);
+    if(isNaN(birth.getTime())) return '';
+    const today = new Date();
+    if(isChild){
+      let months = (today.getFullYear() - birth.getFullYear()) * 12 + (today.getMonth() - birth.getMonth());
+      if(today.getDate() < birth.getDate()) months--;
+      if(months < 0) return '';
+      if(months < 24) return months + ' bulan';
+      return Math.floor(months/12) + ' tahun';
+    }
+    let age = today.getFullYear() - birth.getFullYear();
+    const m = today.getMonth() - birth.getMonth();
+    if(m < 0 || (m === 0 && today.getDate() < birth.getDate())) age--;
+    return age >= 0 ? age + ' tahun' : '';
+  }
+
+  function setupAge(birthdateId, ageId, isChild){
+    const bIn = document.getElementById(birthdateId);
+    const aIn = document.getElementById(ageId);
+    function update(){ aIn.value = calculateAge(bIn.value, isChild); }
+    bIn.addEventListener('change', update);
+    bIn.addEventListener('input', update);
+  }
+  setupAge('parent_birthdate', 'parent_age', false);
+  setupAge('child_birthdate', 'child_age', true);
+
+  document.querySelectorAll('.option-card').forEach(card => {
+    card.addEventListener('click', function(){
+      const radio = this.querySelector('input[type="radio"]');
+      if(radio){
+        radio.checked = true;
+        const grid = this.closest('.options-grid');
+        if(grid) grid.querySelectorAll('.option-card').forEach(c=>c.classList.remove('selected'));
+        this.classList.add('selected');
+        errPane.style.display = 'none';
+      }
+    });
+  });
+
+  function updateProgress(){
+    if(currentStep > totalSteps){
+      stepCounter.textContent = 'Selesai';
+      progressPercent.textContent = '100%';
+      progressFill.style.width = '100%';
+      return;
+    }
+    stepCounter.textContent = `Langkah ${currentStep} dari ${totalSteps}`;
+    const pct = Math.round(((currentStep - 1) / totalSteps) * 100);
+    progressPercent.textContent = `${pct}%`;
+    progressFill.style.width = `${pct}%`;
+  }
+
+  function validateStep(step){
+    if(step === 1){
+      const pName = document.getElementById('parent_name').value.trim();
+      const cName = document.getElementById('child_name').value.trim();
+      const pBdate = document.getElementById('parent_birthdate').value.trim();
+      const cBdate = document.getElementById('child_birthdate').value.trim();
+      const pAge = document.getElementById('parent_age').value;
+      const cAge = document.getElementById('child_age').value;
+      if(!pName || !cName || !pBdate || !cBdate){
+        errPane.textContent = 'Silakan lengkapi nama dan tanggal lahir orang tua serta anak.';
+        errPane.style.display = 'block';
+        return false;
+      }
+      if(!pAge || !cAge){
+        errPane.textContent = 'Usia tidak dapat dihitung. Periksa kembali tanggal lahir.';
+        errPane.style.display = 'block';
+        return false;
+      }
+    } else if(step >= 2 && step <= 9){
+      const pane = document.querySelector(`.step-pane[data-step="${step}"]`);
+      const grids = pane.querySelectorAll('.options-grid');
+      for(let g of grids){
+        const name = g.getAttribute('data-name');
+        const checked = pane.querySelector(`input[name="${name}"]:checked`);
+        if(!checked){
+          errPane.textContent = 'Harap jawab kedua pertanyaan emosi & reaksi.';
+          errPane.style.display = 'block';
+          return false;
+        }
+      }
+    } else if(step >= 10 && step <= 21){
+      const pane = document.querySelector(`.step-pane[data-step="${step}"]`);
+      const g = pane.querySelector('.options-grid');
+      const name = g.getAttribute('data-name');
+      const checked = pane.querySelector(`input[name="${name}"]:checked`);
+      if(!checked){
+        errPane.textContent = 'Harap pilih salah satu opsi jawaban.';
+        errPane.style.display = 'block';
+        return false;
+      }
+    }
+    errPane.style.display = 'none';
+    return true;
+  }
+
+  function showStep(step){
+    stepPanes.forEach(pane => {
+      pane.classList.remove('active');
+      if(parseInt(pane.getAttribute('data-step')) === step) pane.classList.add('active');
+    });
+    btnPrev.style.display = step > 1 && step <= totalSteps ? 'inline-flex' : 'none';
+    if(step > totalSteps){
+      navBar.style.display = 'none';
+      calculateAndFillPreview();
+    } else {
+      navBar.style.display = 'flex';
+      btnNext.textContent = (step === totalSteps) ? 'Selesai & Kirim' : 'Lanjutkan';
+    }
+    updateProgress();
+    window.scrollTo({top:0, behavior:'smooth'});
+  }
+
+  btnNext.addEventListener('click', () => {
+    if(validateStep(currentStep)){ currentStep++; showStep(currentStep); }
+  });
+  btnPrev.addEventListener('click', () => {
+    if(currentStep > 1){ currentStep--; showStep(currentStep); }
+  });
+
+  function escapeHtml(s){
+    return String(s||'').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'})[c]);
+  }
+
+  function calculateResults(){
+    const pName = document.getElementById('parent_name').value.trim();
+    const cName = document.getElementById('child_name').value.trim();
+    const relationship = document.getElementById('relationship').value;
+    const pAge = document.getElementById('parent_age').value;
+    const cAge = document.getElementById('child_age').value;
+    const pBdate = document.getElementById('parent_birthdate').value;
+    const cBdate = document.getElementById('child_birthdate').value;
+
+    let healthyCount = 0;
+    const mmBreakdown = {healthy:0, generalization:0, deletion:0, distortion:0};
+    for(let i=1; i<=12; i++){
+      const val = document.querySelector(`input[name="mm_${i}"]:checked`)?.value;
+      if(val){
+        mmBreakdown[val] = (mmBreakdown[val]||0) + 1;
+        if(val === 'healthy') healthyCount++;
+      }
+    }
+    const healthyScorePct = Math.round((healthyCount / 12) * 100);
+
+    const emotions = [];
+    const responses = [];
+    for(let i=1; i<=8; i++){
+      const e = document.querySelector(`input[name="emo_${i}"]:checked`)?.value;
+      const r = document.querySelector(`input[name="resp_${i}"]:checked`)?.value;
+      if(e) emotions.push(e);
+      if(r) responses.push(r);
+    }
+
+    let archetype = "The Developing Parent";
+    let subTitle = "Masih Bertumbuh, Butuh Dukungan & Konsistensi";
+    if(healthyScorePct >= 75){
+      archetype = "The Warm Anchor";
+      subTitle = "Stabil, Hangat, Konsisten & Penuh Kesadaran";
+    } else if(mmBreakdown.distortion >= 4){
+      archetype = "The Anxious Guardian";
+      subTitle = "Sering Berasumsi, Cemas Berlebihan pada Anak";
+    } else if(mmBreakdown.generalization >= 4){
+      archetype = "The Weary Reactor";
+      subTitle = "Cenderung Menyamaratakan & Mudah Lelah";
+    }
+
+    const uniqEmo = [...new Set(emotions)];
+    const uniqResp = [...new Set(responses)];
+    const callout = `${relationship} ${pName} (orang tua dari ${cName}, usia ${cAge}) memiliki skor Pola Pikir Sehat sebesar ${healthyScorePct}% (${healthyCount}/12). Dominasi emosi saat tertekan adalah ${uniqEmo.slice(0,3).join(', ')} dengan kecenderungan respons ${uniqResp.slice(0,2).join(', ')}.`;
+    const commGuide = `Rekomendasi untuk ${pName}:
+- Validasi emosi anak sebelum memberi solusi atau nasihat.
+- Beri jeda 10 detik sebelum merespons saat lelah atau kesal.
+- Pegang satu aturan utama yang konsisten, bukan banyak aturan sekaligus.
+- Berikan apresiasi spesifik saat anak melakukan hal baik.
+- Sediakan 15 menit waktu khusus untuk diri sendiri setiap hari.`;
+
+    const rawAnswers = {};
+    for(let i=1; i<=8; i++){
+      rawAnswers['emo_'+i] = document.querySelector(`input[name="emo_${i}"]:checked`)?.value || '';
+      rawAnswers['resp_'+i] = document.querySelector(`input[name="resp_${i}"]:checked`)?.value || '';
+    }
+    for(let i=1; i<=12; i++){
+      rawAnswers['mm_'+i] = document.querySelector(`input[name="mm_${i}"]:checked`)?.value || '';
+    }
+
+    return {
+      parent_name: pName, relationship: relationship,
+      parent_age: pAge, parent_birthdate: pBdate,
+      child_name: cName, child_age: cAge, child_birthdate: cBdate,
+      archetype, subtitle: subTitle,
+      healthy_score: healthyScorePct, healthy_count: healthyCount, total_mm: 12,
+      mm_breakdown: mmBreakdown, emotions: uniqEmo, responses: uniqResp,
+      callout, comm_guide: commGuide, ...rawAnswers
+    };
+  }
+
+  function calculateAndFillPreview(){
+    const r = calculateResults();
+    window.__assessmentResults = r;
+    document.getElementById('submit-preview').innerHTML = `
+      <div><b>Orang Tua:</b> ${escapeHtml(r.parent_name)} (${escapeHtml(r.parent_age)})</div>
+      <div><b>Hubungan:</b> ${escapeHtml(r.relationship)}</div>
+      <div><b>Anak:</b> ${escapeHtml(r.child_name)} (${escapeHtml(r.child_age)})</div>
+      <div><b>Arketipe:</b> ${escapeHtml(r.archetype)}</div>
+      <div><b>Skor Pola Pikir Sehat:</b> ${r.healthy_score}% (${r.healthy_count}/12)</div>
+    `;
+  }
+
+  document.getElementById('btn-submit').onclick = function(){
+    const btn = this;
+    const statusEl = document.getElementById('submit-status');
+    const results = window.__assessmentResults;
+    if(!results){
+      statusEl.textContent = 'Data tidak ditemukan. Silakan muat ulang halaman.';
+      statusEl.style.color = '#B3261E';
+      return;
+    }
+    btn.disabled = true;
+    statusEl.textContent = 'Mengirim laporan...';
+    statusEl.style.color = 'var(--ink2)';
+
+    fetch(APPS_SCRIPT_URL, {
+      method: 'POST', mode: 'no-cors',
+      headers: {'Content-Type': 'text/plain;charset=utf-8'},
+      body: JSON.stringify(results)
+    })
+    .then(() => {
+      setTimeout(() => {
+        document.getElementById('submit-preview').innerHTML = `
+          <div style="text-align:center;padding:22px 14px;">
+            <div style="font-size:52px;margin-bottom:8px;">✅</div>
+            <h3 style="color:var(--ink);margin-bottom:8px;font-size:18px;font-family:var(--fd);font-weight:400;">Laporan Terkirim</h3>
+            <p style="color:var(--ink2);font-size:13.5px;line-height:1.6;">
+              Laporan pengasuhan <b>${escapeHtml(results.parent_name)}</b> telah dikirim ke admin.
+              Ringkasan diterima via email, data lengkap masuk ke spreadsheet.
+            </p>
+            <p style="color:var(--ink3);font-size:12px;margin-top:12px;">Terima kasih sudah meluangkan waktu untuk refleksi ini.</p>
+          </div>`;
+        btn.style.display = 'none';
+        statusEl.textContent = '';
+      }, 1200);
+    })
+    .catch(err => {
+      btn.disabled = false;
+      statusEl.textContent = '❌ Gagal mengirim. Periksa koneksi lalu coba lagi.';
+      statusEl.style.color = '#B3261E';
+      console.error(err);
+    });
+  };
+})();
+</script>
+</body>
+</html>
